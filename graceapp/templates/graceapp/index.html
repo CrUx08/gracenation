@@ -1,0 +1,473 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome Home - Gracenation Ministry</title>
+    <link rel="icon" href="{%static 'img/graceicon.jpg'%}" type="img/x-icon" />
+    <link rel="stylesheet" href="{%static 'style.css'%}" />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@latest/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@latest/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="{% static 'graceapp.js'%}"></script>
+  </head>
+  <body>
+    <div class="root-content">
+      <div class="top">
+        <div class="top-middle-links">
+          <div class="top-left">
+            <div class="section img">
+              <a href="{% url 'index'%}"
+                ><img src="{% static 'img/graceicon.jpg'%}"
+              /></a>
+            </div>
+            <div class="grace">
+              <a
+                href="{% url 'index'%}"
+                style="text-decoration: none; color: gray"
+                >Gracenation Ministry</a
+              >
+            </div>
+          </div>
+
+          <div class="mid">
+            <div class="input-search" onclick="search()">
+              <div class="search-icon"><ion-icon name="search"></ion-icon></div>
+              <input type="search" placeholder="Search" />
+            </div>
+          </div>
+          <div class="sections">
+            <li class="section">Donate</li>
+            <li class="section" onclick="servecontact('serve')">Serve</li>
+            <li class="section">Events</li>
+            <li class="section" onclick="about()">About us</li>
+            <li class="section" onclick="servecontact('contact')">
+              Contact us
+            </li>
+          </div>
+        </div>
+        <div class="welcome">
+          <div class="words">
+            <p class="gen">Welcome in Generation rooted in Christ</p>
+            <p class="from">From Gen-z in christ to Gracenation</p>
+          </div>
+          <div class="hear">
+            <div class="click" onclick="servecontact('serve')">
+              <p>Get connected</p>
+            </div>
+            <div class="aboutus"><li>Learn more</li></div>
+          </div>
+        </div>
+        <video autoplay muted loop playsinline>
+          <source src="{% static 'img/gracevid.MP4'%}" type="video/mp4" />
+        </video>
+      </div>
+      <div class="content">
+        <div class="sermon">
+          <div class="sermon-left">
+            <img src="{%static 'img/preacher.jpg'%}" />
+          </div>
+          <div class="sermon-right">
+            <div class="latest-sermon">
+              <div class="title">latest message</div>
+              <div class="mess">
+                Check out the latest Gracenation annive on our YouTube channel.
+              </div>
+              <div class="butt">watch event</div>
+            </div>
+            <div class="latest-sermon">
+              <div class="title">Join Us</div>
+              <div class="mess">
+                We would like to welcome You in our online prayer
+              </div>
+              <div class="butt" style="margin-left: 38%">Join us</div>
+            </div>
+          </div>
+        </div>
+        <div class="vis-miss-str">
+          <div class="cont">
+            <div class="mission">
+              <div class="title">Our Mission</div>
+              <div class="content">
+                <p class="word">Proclaiming the will of God</p>
+                <p>JEREMIAH 1:7</p>
+              </div>
+            </div>
+            <div class="vision">
+              <div class="title">Our Vision</div>
+              <div class="content" style="margin-left: 10%">
+                <p class="word">A generation that is rooted in christ</p>
+                <p>JEREMIAH 17:7-8</p>
+              </div>
+            </div>
+            <div class="strategy">
+              <div class="title">Our Strategy</div>
+              <div class="content">
+                <p class="word">Going with our strength</p>
+                <p>ECCLESIASTES 12:1</p>
+              </div>
+            </div>
+          </div>
+          <div class="butt" onclick="servecontact('serve')">JOIN US</div>
+        </div>
+        <div class="our-team">
+          <p class="title">Testimonies</p>
+          <p class="int-test">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum
+            accusamus, porro suscipit reiciendis maiores possimus expedita
+            quibusdam vero? Harum vero aperiam delectus ab consequuntur fuga
+            voluptas! Reprehenderit ut praesentium labore?
+          </p>
+          <div class="our-team-content">
+            <div class="test-1">
+              <div class="pic">
+                <img src="{%static 'img/mammy.jpg'%}" />
+              </div>
+              <div class="welcome-phrase">
+                <p class="name">UMUGISHA ANGE TESSI</p>
+                <p class="leader">Leader of Gracenation Ministry</p>
+                <p class="words">
+                  " Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Dolor nam atque voluptatibus facere iste sequi neque animi
+                  numquam vel, commodi obcaecati ipsum dignissimos repellendus,
+                  laudantium excepturi molestiae maiores quaerat eius. Lorem
+                  ipsum dolor sit amet consectetur adipisicing elit. Placeat
+                  eaque qui excepturi ea alias, ipsa ratione velit impedit
+                  tempore aperiam autem veniam, natus a neque dolorum quibusdam,
+                  pariatur debitis cupiditate? "
+                </p>
+              </div>
+            </div>
+            <div class="other-test">
+              <div class="test">
+                <div class="img"><img src="{%static 'img/aud.JPG'%}" /></div>
+
+                <div class="content">
+                  <div class="test-name">AUDRINE</div>
+                  <div class="lead">Media Officer</div>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Corporis repudiandae facere quod id aliquam ex, vitae
+                  reprehenderit eum cumque quibusdam magni! Ab soluta voluptas
+                  eveniet, similique quae quis ducimus magni.
+                </div>
+              </div>
+              <div class="test">
+                <div class="img"><img src="{%static 'img/cedro.JPG'%}" /></div>
+                <div class="content">
+                  <div class="test-name">CEDRICK GATSINZI</div>
+                  <div class="lead">Project Manager</div>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Corporis repudiandae facere quod id aliquam ex, vitae
+                  reprehenderit eum cumque quibusdam magni! Ab soluta voluptas
+                  eveniet, similique quae quis ducimus magni.
+                </div>
+              </div>
+              <div class="test">
+                <div class="img"><img src="{%static 'img/ngoga.JPG'%}" /></div>
+                <div class="content">
+                  <div class="test-name">RUGWIZA NGOGA</div>
+                  <div class="lead">Social affair</div>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Corporis repudiandae facere quod id aliquam ex, vitae
+                  reprehenderit eum cumque quibusdam magni! Ab soluta voluptas
+                  eveniet, similique quae quis ducimus magni.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="experience">
+          <div class="welcome-phrase">
+            <p class="title">Find the right experience for you.</p>
+            <p class="leader">
+              No matter where you are, online or in person, become a part of all
+              God is doing.
+            </p>
+          </div>
+          <div class="exper-action">
+            <div class="actions bible-study">
+              <p class="title">Bible study</p>
+              <p class="content">
+                Join us for daily bible study as we grow together in god's word
+              </p>
+              <p class="more" style="margin-top: 15%">
+                Find time &nbsp;&nbsp;&nbsp;>
+              </p>
+            </div>
+            <div class="actions gathering">
+              <p class="title">Gathering</p>
+
+              <p class="content">
+                We gather regularly to worship , pray and strengthen one another
+                in faith- you're always welcome
+              </p>
+              <p class="more">Find Dates | location &nbsp;&nbsp;&nbsp;></p>
+            </div>
+            <div class="actions street-preaching">
+              <p class="title">Street Preaching</p>
+              <p class="content">
+                Taking the Gospel beyond the walls- join us in street preaching
+                and sharing the hope of christ
+              </p>
+              <p class="more">Find location &nbsp;&nbsp;&nbsp;></p>
+            </div>
+            <div class="actions charity">
+              <p class="title">Charity & Giving</p>
+              <p class="content">
+                We are committed to serving our community through charity and
+                acts of love-be a part of the mission
+              </p>
+              <p class="more">Donate &nbsp;&nbsp;&nbsp;></p>
+            </div>
+          </div>
+          <div class="serve">
+            <label class="butt" onclick="servecontact('serve')">
+              Serve with us
+            </label>
+          </div>
+        </div>
+        <div class="getinvolved">
+          <div class="getinvolve">
+            <p class="title">How To Get Involved</p>
+            <p class="description">
+              See how God can use your gifts to make an eternal impact.
+            </p>
+          </div>
+
+          <div class="Involve">
+            <div class="involve preache">
+              <div class="img"><img src="{%static 'img/preach.JPG'%}" /></div>
+              <div class="description">
+                <p class="name">Preach</p>
+                Preach us in gathering or teach us in our daily bible study.
+                <div class="learn-more">learn more &nbsp;></div>
+              </div>
+            </div>
+            <div class="involve sing">
+              <div class="img"><img src="{%static 'img/sing.JPG'%}" /></div>
+              <div class="description">
+                <p class="name">Sing</p>
+                Participate in the mission to advance the gospel by serving in
+                our worship team.
+                <div class="learn-more">learn more &nbsp;></div>
+              </div>
+            </div>
+            <div class="involve dance">
+              <div class="img"><img src="{%static 'img/mush.JPG'%}" /></div>
+              <div class="description">
+                <p class="name">Dance</p>
+                Participate in the mission to advance the gospel by serving in
+                our drama team.
+                <div class="learn-more">learn more &nbsp;></div>
+              </div>
+            </div>
+          </div>
+          <div class="involve-butt" onclick="servecontact('serve')">
+            get involved
+          </div>
+        </div>
+      </div>
+      <div class="about-section" id="welcome-about">
+        <div class="about-content">
+          <div class="welcome-about">
+            <p class="head">See What God Can Do Through You</p>
+            <p class="head-2">
+              We are here to help you deepen your faith and discover your
+              purpose.
+            </p>
+            <p class="head-3">
+              Since 2024, we've witnessed people begin a relationship with
+              Christ and grow in their faith across rwanda through our online
+              ministry. From meaningful worship to relatable sermons, you'll
+              experience hope and strengthen your faith as you discover who God
+              has made you to be.
+            </p>
+          </div>
+          <div class="welc-img">
+            <img src="{% static 'img/worship.jpg'%}" />
+          </div>
+          <div class="whoweare" id="whoweare">
+            <div class="whoweare-tit">
+              <p class="tit">Who We are</p>
+            </div>
+            <div class="whoweare-desc">
+              <p class="tit-desc">
+                We exist so that Youth people far from God will be raised to
+                life in Christ.
+              </p>
+            </div>
+            <div class="whostrat">
+              <div class="cont about">
+                <div class="mission">
+                  <div class="title">Our Mission</div>
+                  <div class="content">
+                    <p class="word">Proclaiming the will of God</p>
+                    <p>JEREMIAH 1:7</p>
+                  </div>
+                </div>
+                <div class="vision about">
+                  <div class="title">Our Vision</div>
+                  <div class="content">
+                    <p class="word">A generation that is rooted in christ</p>
+                    <p>JEREMIAH 17:7-8</p>
+                  </div>
+                </div>
+                <div class="strategy about">
+                  <div class="title">Our Strategy</div>
+                  <div class="content">
+                    <p class="word">Going with our strength</p>
+                    <p>ECCLESIASTES 12:1</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="whattoexpect" id="whattoexpect">
+            <p class="tit">Find the right experience for you</p>
+            <p class="dec">
+              No matter where you are, there’s a way for you to be part of all
+              God is doing. Whether online or in-person and connect with our
+              church community on whatsapp.
+            </p>
+
+            <div class="Involve">
+              <div class="involve preache">
+                <div class="img"><img src="{%static 'img/preach.JPG'%}" /></div>
+                <div class="description">
+                  <p class="name">Preach</p>
+                  Preach us in gathering or teach us in our daily bible study.
+                  <div class="learn-more">learn more &nbsp;></div>
+                </div>
+              </div>
+              <div class="involve sing">
+                <div class="img"><img src="{%static 'img/sing.JPG'%}" /></div>
+                <div class="description">
+                  <p class="name">Sing</p>
+                  Participate in the mission to advance the gospel by serving on
+                  a worship team.
+                  <div class="learn-more">learn more &nbsp;></div>
+                </div>
+              </div>
+              <div class="involve dance">
+                <div class="img"><img src="{%static 'img/dance.png'%}" /></div>
+                <div class="description">
+                  <p class="name">Dance</p>
+                  Participate in the mission to advance the gospel by serving on
+                  a drama team.
+                  <div class="learn-more">learn more &nbsp;></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="leadership" id="leadership">
+            <div class="leadwelc">
+              <p class="tit">Meet Our Commitee</p>
+              <p class="welcomingphrase">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Mollitia pariatur possimus unde vel, voluptate delectus
+                obcaecati enim adipisci illo error dignissimos similique, nam
+                facilis laudantium, totam aliquid rem eius magni! Lorem ipsum
+                dolor, sit amet consectetur adipisicing elit. Iusto dolorum ex
+                voluptatibus optio eligendi nulla culpa maiores pariatur
+                reprehenderit quae itaque architecto, nisi, nihil repellat ipsa!
+                Dicta itaque voluptates doloremque? Lorem ipsum dolor sit amet,
+                consectetur adipisicing elit. Accusantium facere laboriosam
+                corporis, libero illo voluptatum totam sequi maiores doloremque
+                in. Iure nisi impedit eveniet consequatur doloribus mollitia
+                modi officiis dolorem.
+              </p>
+            </div>
+            <div class="img"><img src="{% static 'img/lead.png'%}" /></div>
+            <div class="img-founders">
+              <div class="img"><img src="{% static 'img/found.png'%}" /></div>
+            </div>
+            <div class="phrase">
+              Together, Echo and Joella Found Gracenation in Kigali-Rwanda, and
+              Was High school students . As the founder and lead pastor of
+              Elevation Church, Steven Furtick has helped Elevation grow from a
+              multi-site church into a global ministry through online streaming,
+              television, and the music of Elevation Worship. He is a GRAMMY
+              Award-winning songwriter and producer and a New York Times
+              best-selling author. He holds a Master of Divinity degree from
+              Southern Theological Seminary and is the author of Crash the
+              Chatterbox, Greater, Sun Stand Still, (Un)Qualified, Seven-Mile
+              Miracle, and his latest book, Do the New You. Holly Furtick is
+              co-founder and pastor at Elevation Church. She has authored
+              multiple Bible studies and is known for her relevant and relatable
+              teachings. When she's not caring for family or serving in ministry
+              alongside her husband, Holly spends her time cooking and listening
+              to audiobooks (usually at the same time), tracking down her
+              virtual book club's next read.
+            </div>
+          </div>
+          <div class="come-serve" id="come-serve">
+            <div class="signup"></div>
+            <div class="gather">
+              <div class="img">
+                <img src="{% static 'img/graceicon.jpg'%}" />
+              </div>
+              <div class="ready">
+                <p class="tit">Ready to Gather with us?</p>
+                <p class="desc">Make plans to join us this Evening!</p>
+                <div class="join">Join</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="about-section-nav">
+          <a href="#welcome-about"
+            ><li class="sect-1" onclick="sectiononclick('.sect-1')">
+              About
+            </li></a
+          >
+          <a href="#whoweare"
+            ><li class="sect-2" onclick="sectiononclick('.sect-2')">
+              Who we are
+            </li></a
+          >
+          <a href="#whattoexpect"
+            ><li class="sect-3" onclick="sectiononclick('.sect-3')">
+              What to expect
+            </li></a
+          >
+          <a href="#leadership"
+            ><li class="sect-4" onclick="sectiononclick('.sect-4')">
+              Leadership
+            </li></a
+          >
+          <a href="#come-serve"
+            ><li class="sect-5" onclick="sectiononclick('.sect-5')">
+              Get involved
+            </li></a
+          >
+        </div>
+      </div>
+      <div class="serve-contact">
+        <div class="form">
+          <div class="welcomephrase">
+            <div class="welcome-tit">Contact Us</div>
+            <div class="phr">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
+              sequi assumenda saepe eius amet maiores laborum culpa corporis
+              corrupti blanditiis ab animi laboriosam ut dolorum, aliquam hic
+              impedit quisquam! Eum.
+            </div>
+          </div>
+          <div class="serve-contact-form">
+            <input type="text" placeholder="Full Names" /><br />
+            <input type="email" name="" id="" placeholder="Email" />
+            <div class="serve-message"></div>
+            <div class="serve-contact-butt">Send</div>
+          </div>
+          <div class="social-links"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
